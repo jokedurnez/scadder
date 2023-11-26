@@ -1,0 +1,59 @@
+{% include "header.html" %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% load static %}
+
+<body>
+    {% include "navbar.html" %}
+    <header class="py-5 bg-light border-bottom mb-4">
+        <div class="container">
+            <div class="text-center my-5">
+                <h1 class="fw-bolder">Scadder</h1>
+                <p class="lead mb-0">An online stl generator for parametric models. Create unique 3d models with your
+                    own text input. Create personalized gifts for loved ones.
+                </p>
+                <p class="lead mb-0">Add your own text and download the .stl file ready for slicing.</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <!-- Blog post-->
+                        <div class="col-lg-6">
+                            <div class="card mb-4">
+                                <a href="/generator/"><img class="card-img-top" src="{% static 'images/rango-picture.png' %}"
+                                        alt="..." /></a>
+                                <div class="card-body">
+                                    <h2 class="card-title h4">Ornament</h2>
+                                    <p class="card-text">Create a christmas ornament with a name and chosen profile.</p>
+                                    <a class="btn btn-primary" href="/generator/">Go →</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Blog post-->
+                        <div class="col-lg-6">
+                            <div class="card mb-4">
+                             </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="card mb-4">
+                        <div class="card-header">Side Bar</div>
+                        <div class="card-body">{{ my_text }}</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

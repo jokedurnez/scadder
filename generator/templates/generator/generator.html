@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+{% include "header.html" %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% load static %}
+<body>
+    {% include "navbar.html" %}
+
+
+    <div class="container">
+        <div class="row">
+
+            <!-- Side widgets-->
+            <div class="col-lg-4">
+                <form action="/generator/" method="post" class="form">
+                    {% csrf_token %}
+                    {% bootstrap_form form %}
+                    {% buttons %}
+                    <button type="submit" class="btn btn-primary">
+                        Submit
+                    </button>
+                    {% endbuttons %}
+                </form>
+            </div>
+            <!-- Blog entries-->
+            <div class="col-lg-8">
+            </div>
+        </div>
+</body>
+
+</html>
